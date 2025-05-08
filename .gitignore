@@ -1,0 +1,11 @@
+# Dependencies
+**/node_modules
+
+# Environment files
+.env
+
+# Package locks
+package-lock.json
+
+# IDE/Editor specific
+.vscode/

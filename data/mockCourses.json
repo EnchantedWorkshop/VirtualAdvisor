@@ -1,0 +1,94 @@
+[
+  {
+    "id": "CS101",
+    "name": "Introduction to Computer Science",
+    "description": "A foundational course in computer science principles, including basic programming concepts.",
+    "credits": 3,
+    "prerequisites": [],
+    "corequisites": [],
+    "semesterOffered": ["Fall", "Spring", "Summer"],
+    "type": "core",
+    "unlocks": ["CS201", "CS280"]
+  },
+  {
+    "id": "MA101",
+    "name": "Calculus I",
+    "description": "Introduction to differential calculus.",
+    "credits": 4,
+    "prerequisites": [],
+    "corequisites": [],
+    "semesterOffered": ["Fall", "Spring"],
+    "type": "general_education",
+    "unlocks": ["MA201", "PHY201"]
+  },
+  {
+    "id": "CS201",
+    "name": "Data Structures",
+    "description": "Covers fundamental data structures such as lists, trees, and graphs.",
+    "credits": 3,
+    "prerequisites": ["CS101"],
+    "corequisites": [],
+    "semesterOffered": ["Fall", "Spring"],
+    "type": "core",
+    "unlocks": ["CS301", "EECS370"]
+  },
+  {
+    "id": "CS280",
+    "name": "Programming Paradigms",
+    "description": "Explores different programming paradigms like functional and object-oriented.",
+    "credits": 4,
+    "prerequisites": ["CS101"],
+    "corequisites": [],
+    "semesterOffered": ["Fall", "Spring"],
+    "type": "core",
+    "unlocks": ["EECS370"]
+  },
+  {
+    "id": "EECS203",
+    "name": "Discrete Mathematics",
+    "description": "Covers mathematical foundations for computer science, including logic, sets, and graph theory.",
+    "credits": 4,
+    "prerequisites": [],
+    "corequisites": [],
+    "semesterOffered": ["Fall", "Spring"],
+    "type": "core",
+    "unlocks": ["CS376"]
+  },
+  {
+    "id": "MATH216",
+    "name": "Introduction to Differential Equations",
+    "description": "An introduction to the theory, solution, and application of ordinary differential equations.",
+    "credits": 4,
+    "prerequisites": ["MA101"],
+    "corequisites": [],
+    "semesterOffered": ["Fall", "Spring", "Summer"],
+    "type": "elective_option",
+    "substitutionGroup": "math_adv",
+    "unlocks": ["EECS370"]
+  },
+  {
+    "id": "EECS370",
+    "name": "Introduction to Computer Organization",
+    "description": "Covers machine organization, instruction set architecture, and basic hardware components.",
+    "credits": 4,
+    "prerequisites": [],
+    "prerequisiteLogic": {
+      "and": ["CS201", "CS280"],
+      "or": ["EECS203", "MATH216"]
+    },
+    "corequisites": [],
+    "semesterOffered": ["Fall", "Spring"],
+    "type": "core",
+    "unlocks": ["EECS481"]
+  },
+  {
+    "id": "EECS481",
+    "name": "Software Engineering Senior Design",
+    "description": "A capstone project course focusing on software engineering principles and teamwork.",
+    "credits": 4,
+    "prerequisites": ["EECS370"],
+    "corequisites": [],
+    "semesterOffered": ["Fall", "Winter"],
+    "type": "capstone"
+  }
+] 
